@@ -11,6 +11,8 @@ import { GlobalStyles } from "./src/constants/styles";
 import { Ionicons } from "@expo/vector-icons";
 import IconButton from "./src/components/UI/IconButton";
 import ExpensesContextProvider from "./src/store/contextApi";
+import { Provider } from "react-redux";
+import store from "./src/store/redux/store";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -64,6 +66,7 @@ const App = () => {
   return (
     <>
       <StatusBar style="light" />
+
       <ExpensesContextProvider>
         <NavigationContainer>
           <Stack.Navigator
